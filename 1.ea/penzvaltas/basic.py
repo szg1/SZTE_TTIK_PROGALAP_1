@@ -12,6 +12,5 @@ If you find any bugs, please report them to the author
 """
 
 forint=input("Hány forintod van? ")
-valto = 370.0
-euro = int(forint) / valto
+euro = int(forint) / 370.0
 print(forint,"forintból",euro,"euró-t tudsz vásárolni")
