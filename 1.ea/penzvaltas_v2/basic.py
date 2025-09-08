@@ -11,11 +11,18 @@ You are NOT allowed to use it for commercial purposes
 If you find any bugs, please report them to the author
 """
 
+# Nagybetűs változók: konstansok (nem változnak a program futása során)
+# - A python nem tiltja meg a módosításukat, de a programozói konvenciók szerint
+#   nem szabad megváltoztatni őket
 HUFEUR = 390.0
 
+# függvénydefiníció
+# (forint, arfolyam) <- paraméterek
 def valtas(forint,arfolyam):
+    # return: visszatérési érték
     return forint / arfolyam
 
+# főprogram definiálása
 def main():
     forint = float(input("Hány forintod van? "))
     print(f"{forint:.2f} forintból {valtas(forint,HUFEUR):.2f} euró-t tudsz vásárolni")

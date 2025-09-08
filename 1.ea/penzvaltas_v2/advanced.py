@@ -10,12 +10,23 @@ You are NOT allowed to publish it as your own work
 You are NOT allowed to use it for commercial purposes
 If you find any bugs, please report them to the author
 """
+# Nagybetűs változók: konstansok (nem változnak a program futása során)
+# - A python nem tiltja meg a módosításukat, de a programozói konvenciók szerint
+#   nem szabad megváltoztatni őket
 HUFEUR = 370.0 # globális változó, az euró árfolyama
 
+# függvénydefiníció
+# () <- paraméterek
+# forint:int, arfolyam:float <- típusmegkötések
+# -> float <- visszatérési érték típusa
 def valtas(forint:int, arfolyam:float) -> float: # függvény definiálása
     """Forintot euróra vált az adott árfolyamon"""
+    # if: feltétel
+    # - feltétel: az árfolyam nem lehet nulla
     if arfolyam == 0.0: # az árfolyam nem lehet nulla
+        # raise: kivétel dobása, a program leáll, és kiírja a hibát
         raise ValueError("Az árfolyam nem lehet nulla!") # hibakezelés
+    # return: visszatérési érték
     return forint / arfolyam # átváltás
 
 def main() -> None: # főprogram definiálása
