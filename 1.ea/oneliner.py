@@ -11,6 +11,4 @@ You are NOT allowed to use it for commercial purposes
 If you find any bugs, please report them to the author
 """
 
-forint=input("Hány forintod van? ")
-euro = int(forint) / 370.0
-print(forint,"forintból",euro,"euró-t tudsz vásárolni")
+print(f'{float(int(input("Hány forintod van? "))/370.0):.2f} euró-t tudsz vásárolni')

@@ -10,5 +10,15 @@ You are NOT allowed to publish it as your own work
 You are NOT allowed to use it for commercial purposes
 If you find any bugs, please report them to the author
 """
-# EURO árfolyam: 370.0 HUF
-print(f'{float(int(input("Hány forintod van? "))/370.0):.2f} euró-t tudsz vásárolni')
+
+HUFEUR = 390.0
+
+def valtas(forint,arfolyam):
+    return forint / arfolyam
+
+def main():
+    forint = float(input("Hány forintod van? "))
+    print(f"{forint:.2f} forintból {valtas(forint,HUFEUR):.2f} euró-t tudsz vásárolni")
+
+if __name__ == "__main__":
+    main()
